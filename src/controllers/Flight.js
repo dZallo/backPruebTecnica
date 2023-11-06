@@ -6,10 +6,6 @@ async function getMostEconomicFiveFligth(req, res) {
 
     // 1º Obtener el origen destino y fechas de salida y llegada
     let { from, to, startDate, endDate } = req.query
-    console.debug('Origen: ' + from)
-    console.debug('Destino: ' + to)
-    console.debug('StartDate: ' + startDate)
-    console.debug('EndDate: ' + endDate)
     let result = {}
 
     //2º Extraer información de los 5 vuelos más económicos con el origen y el destino que elija el usuario (Hay que incluir en los datos el precio, fechas y aerolíneas).
