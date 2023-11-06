@@ -5,7 +5,7 @@ const puppeteer = require('puppeteer');
 async function getFlights(from, to, startDate, endDate) {
     console.debug("getFlights")
     const browser = await puppeteer.launch({
-        headless: false
+        headless: "new"
     })
 
     const page = await browser.newPage()
