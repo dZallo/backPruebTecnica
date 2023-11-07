@@ -20,7 +20,7 @@ async function getForecastDays(city) {
         const response = await axios.get(`${WEATHER_API_URL_BASE}${FORECAST_DAILY}?APPID=${WEATHER_API_KEY}&q=${city}`);
         const data = response.data;
         const nextDaysWeather = getFirstObjectOfEachDay(data.list).map(v => cleanWeatherObject(v))
-        return nextDaysWeather;
+        return nextDaysWeather.slice(1, nextDaysWeather.length);
     } catch (error) {
         console.error(error);
         return { error: 'Error al obtener el clima' };

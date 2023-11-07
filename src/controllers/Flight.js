@@ -3,8 +3,8 @@ const googleFlightsService = require('../services/GoogleFlightsService');
 
 
 async function getMostEconomicFiveFligth(req, res) {
-    res.set('Access-Control-Allow-Origin', 'http://localhost:4200')
-    
+    res.set('Access-Control-Allow-Origin', 'http://localhost:4200');
+
     // 1º Obtener el origen destino y fechas de salida y llegada
     let { from, to, startDate, endDate } = req.query
     let result = {}
