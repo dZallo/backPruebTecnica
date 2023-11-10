@@ -23,7 +23,7 @@ async function getMostEconomicFiveFligth(req, res) {
     
 
     //3º Pronostico de los siguientes dias
-    let weatherNextDays = await weatherApi.getForecastDays(from);
+    let weatherNextDays = await weatherApi.getForecastDays(to);
     if(weatherNextDays.length >0) {
         result['weatherNextDays'] = weatherNextDays
     }
